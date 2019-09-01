@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  node:
+    image: article_node
+
+  nginx:
+    image: article_nginx
+    ports:
+      - 80:80
+    depends_on:
+      - node
