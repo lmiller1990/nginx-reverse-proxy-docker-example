@@ -1,6 +1,9 @@
 version: '3'
 
 services:
+  python:
+    image: article_python
+
   node:
     image: article_node
 
@@ -9,4 +12,4 @@ services:
     ports:
       - 80:80
     depends_on:
-      - node
+      - python
